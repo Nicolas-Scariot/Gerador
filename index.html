@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang = "pt-B">
+<head>
+    <meta charset= "UTF-8">
+    <meta http-arquiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="">
+    <title>Gerador de senhas</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Gerador de senhas</h1>
+    </header>
+    <main>
+        <div id='campo'>
+        <label for='pswLeght'>Digite o tamanho da senha:</label>
+        <input id='pswLeght'type='number' min='1'>
+
+        <label>Digite a quantidade de senhas</label>
+        <input id='pswQtd' type='number' min='1'>
+        </div>
+
+        <div id='check'>
+        <label><input id='special' type='checkbox'>Incluir caracteres especiais</label>
+        <label><input id='number' type='checkbox'>Incluir números</label>
+        <label><input id='upperCase' type='checkbox'>Incluir letras maiusculas</label>
+        </div> 
+
+        <div id="Bot">
+        <button id="botao" onclick="pswGenerate()">Gerar senha</button>
+        <button id="botao" onclick="clean()">Limpar senhas</button>
+        </div>
+        
+        <div id='resultado'>
+            <textarea id='resposta' rows="6" style='width:250px'>Senhas</textarea>
+        </div>
+
+        <script>
+            function pswGenerate(){
+                let characters = 'abcdefghijklmnopqrstuvwxyz'
+                let password = ''
+                let leght = document.getElementById('pswLeght').value
+                let qtd = document.getElementById('pswQtd').value
+                let spc = document.getElementById('special').checked
+                let upp = document.getElementById('upperCase').checked
+                let num = document.getElementById('number').checked
+
+                if(spc == true){characters += '@!#$%&*()'}
+                if(num == true){characters += '0123456789'}
+                if(upp == true){characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
+                let charactersLength = characters.length;
+
+                for(let y = 1; y <= qtd; y++){
+                    let passwordN = ''
+                
+                for(let x = 1; x <= leght; x++){
+                    passwordN = passwordN + characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+                password = passwordN + ' ' + password
+            }
+                document.getElementById('resposta').value = password   
+            }
+            function clean(){
+                document.getElementById('resposta').value =' '
+            }
+        </script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

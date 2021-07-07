@@ -1,0 +1,47 @@
+body{
+    background-color: #B8B5FF;
+}
+h1{
+    text-align: center;
+    font-family: Helvetica;
+}
+#check{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Helvetica;
+}
+#campo{
+    text-align: center;
+    font-family: Helvetica;
+}
+#botao{
+    text-align: center;
+    width: 150px;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #F4F9F9;
+
+}
+#resposta{
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #F4F9F9;
+}
+#pswQtd{
+    background-color: #F4F9F9;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+#pswLeght{
+    background-color: #F4F9F9;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+#bot{
+    margin-left: 100px;
+    margin-right: 100px;
+}
