@@ -30,6 +30,7 @@ h1{
     border: 1px solid #eee;
     border-radius: 6px;
     background-color: #F4F9F9;
+    font-family: Helvetica;
 }
 #pswQtd{
     background-color: #F4F9F9;
@@ -44,4 +45,13 @@ h1{
 #bot{
     margin-left: 100px;
     margin-right: 100px;
+}
+#special{
+    font-family: Helvetica;
+}
+#number{
+    font-family: Helvetica;
+}
+#upperCase{
+    font-family: Helvetica;
 }
